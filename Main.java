@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    exo30();
+    exo31();
   }
 
   public static void exo1(){
@@ -54,5 +54,22 @@ class Main {
     }
     System.out.println("valeur min : " + valeurmin);
     System.out.println("valeur max : " + valeurmax);
+  }
+
+  public static void exo31(){
+    int [] tab = {12, 22, 34, 54, 22, 2, 67, 34, 22, 12, 4};
+    for (int j = 0 ; j <tab.length ; j++){
+      for (int k = 0 ; k < j ; k++){
+        if (tab[j] == tab[k]){
+          //supprimer la case du tableau
+          tab[j] = 0;
+          //System.out.println("chiffre en double : " + tab[j]);
+        }
+      }
+    }
+    System.out.println("tabeau sans doublons : ");
+    for (int i = 0 ; i < tab.length ; i++){
+      System.out.print(tab[i] + ", ");
+    }
   }
 }
