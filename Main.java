@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    exo31();
+    exo32();
   }
 
   public static void exo1(){
@@ -62,14 +62,27 @@ class Main {
       for (int k = 0 ; k < j ; k++){
         if (tab[j] == tab[k]){
           //supprimer la case du tableau
-          tab[j] = 0;
-          //System.out.println("chiffre en double : " + tab[j]);
         }
       }
     }
     System.out.println("tabeau sans doublons : ");
     for (int i = 0 ; i < tab.length ; i++){
       System.out.print(tab[i] + ", ");
+    }
+  }
+
+  public static void exo32(){
+    int [] tab = {2, 45, -13, 9, -2, 33, 1};
+    int [] pos = {0};
+    int [] neg = {0};
+    for (int i = 0 ; i < tab.length ; i++){
+      if (tab[i] > 0){
+        //pos[pos.length+1] = tab[i];
+      }
+    }
+    System.out.println("tableau : ");
+    for (int k = 0 ; k < pos.length ; k++){
+      System.out.print(pos[k] + " ,");
     }
   }
 }
