@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    exo6();
+    exo30();
   }
 
   public static void exo1(){
@@ -38,5 +38,21 @@ class Main {
       }
     System.out.println();
     }
+  }
+
+  public static void exo30(){
+    int [] tab = {23, 45, 9, 22, 16, 18};
+    int valeurmin = tab[0];
+    int valeurmax = tab[0];
+    for (int i = 1 ; i < tab.length ; i++){
+      if (tab[i] < valeurmin){
+        valeurmin = tab[i];
+      }
+      if (tab[i] > valeurmax){
+        valeurmax = tab[i];
+      }
+    }
+    System.out.println("valeur min : " + valeurmin);
+    System.out.println("valeur max : " + valeurmax);
   }
 }
