@@ -72,17 +72,24 @@ class Main {
   }
 
   public static void exo32(){
-    int [] tab = {2, 45, -13, 9, -2, 33, 1};
-    int [] pos = {0};
-    int [] neg = {0};
-    for (int i = 0 ; i < tab.length ; i++){
-      if (tab[i] > 0){
-        //pos[pos.length+1] = tab[i];
-      }
+    int [] tab = {2, 0, -3, -456, 45, -13, 9, -2, 33, 1, -7};
+    int echange = 0;
+    int fin = tab.length-1;
+    for (int i = 0 ; i < fin ; i++){
+      if (tab[i] < 0){
+        while (tab[fin] < 0){
+          fin--;
+        }
+        echange = tab[fin];
+        tab[fin] = tab[i];
+        tab[i] = echange;
+        fin--;
+        
+      } 
     }
     System.out.println("tableau : ");
-    for (int k = 0 ; k < pos.length ; k++){
-      System.out.print(pos[k] + " ,");
+    for (int k = 0 ; k < tab.length ; k++){
+      System.out.print(tab[k] + " ,");
     }
   }
 }
