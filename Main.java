@@ -111,16 +111,24 @@ class Main {
   }
 
   public static void exo37(){
-    String chaine = "nbacbacbacbfbac";
-    for (int i = 1 ; i < chaine.length() ; i++){
-      String lettre = chaine.substring(i,i+1);
-      String apres = chaine.substring(i+1,chaine.length());
-      boolean testapres = apres.contains(lettre);
-      String avant = chaine.substring(0,i-1);
-      boolean testavant = avant.contains(lettre);
-      if (testavant == false && testapres == false){
-        System.out.println("index du premier caractère non répétitif : " + i);
-        i = chaine.length() + 1;
+    String chaine = "abacbacbacbbace";
+
+    String lettre1 = chaine.substring(0,1);
+    String apres1 = chaine.substring(1,chaine.length());
+    boolean testapres1 = apres1.contains(lettre1);
+    if (testapres1 == false){
+      System.out.println("index du premier caractère non répétitif : " + 1);
+    } else {
+      for (int i = 1 ; i < chaine.length() ; i++){
+        String lettre = chaine.substring(i,i+1);
+        String apres = chaine.substring(i+1,chaine.length());
+        boolean testapres = apres.contains(lettre);
+        String avant = chaine.substring(0,i-1);
+        boolean testavant = avant.contains(lettre);
+        if (testavant == false && testapres == false){
+          System.out.println("index du premier caractère non répétitif : " + i);
+          i = chaine.length() + 1;
+        }
       }
     }
   }
