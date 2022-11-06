@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo36();
+    exo37();
   }
 
   public static void exo1(){
@@ -108,5 +108,20 @@ class Main {
       fin = fin - mot.length() - 1; //réduction de la fin de la phrase 
     } 
     System.out.println("phrase inversé : " + phraseinv);
+  }
+
+  public static void exo37(){
+    String chaine = "nbacbacbacbfbac";
+    for (int i = 1 ; i < chaine.length() ; i++){
+      String lettre = chaine.substring(i,i+1);
+      String apres = chaine.substring(i+1,chaine.length());
+      boolean testapres = apres.contains(lettre);
+      String avant = chaine.substring(0,i-1);
+      boolean testavant = avant.contains(lettre);
+      if (testavant == false && testapres == false){
+        System.out.println("index du premier caractère non répétitif : " + i);
+        i = chaine.length() + 1;
+      }
+    }
   }
 }
