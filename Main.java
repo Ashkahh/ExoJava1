@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo32();
+    exo36();
   }
 
   public static void exo1(){
@@ -91,5 +92,21 @@ class Main {
     for (int k = 0 ; k < tab.length ; k++){
       System.out.print(tab[k] + " ,");
     }
+  }
+
+  public static void exo36(){
+    String phrase = "test de phrase une après la fin";
+    int fin = phrase.length();
+    String phraseinv = "";
+    while (fin > 0){
+      int index = phrase.lastIndexOf(" "); //detection du dernier espace de la phrase
+      String mot = phrase.substring(index+1,fin); //extraction du dernier mot de la phrase
+      phraseinv = phraseinv.concat(mot + " "); //insertion du mot dans la phrase qui sera inversé
+      if (index > 0){
+      phrase = phrase.substring(0,index); //suppression du dernier mot de la pharse inséré dans la phrase inversé
+      }
+      fin = fin - mot.length() - 1; //réduction de la fin de la phrase 
+    } 
+    System.out.println("phrase inversé : " + phraseinv);
   }
 }
