@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo18();
+    exo21();
   }
 
   public static void exo1(){
@@ -77,7 +77,39 @@ class Main {
       System.out.print(tab[i] + " ");
     }
   }
-  
+
+  public static void exo19(){
+    int [] tab = {1, 8, 4, 19, 5, 2};
+    if (tab.length % 2 == 0){
+      if (tab[0] > tab[1] && tab[0] > tab[tab.length - 1]){
+          System.out.println("La valeur la plus grande du tableau se trouve au début.");
+        } 
+      if (tab[1] > tab[0] && tab[1] > tab[tab.length - 1]){
+        System.out.println("La valeur la plus grande du tableau se trouve en deuxième."); 
+        }
+      if (tab[tab.length - 1] > tab[0] && tab[tab.length - 1] > tab[1]){
+        System.out.println("La valeur la plus grande du tableau se trouve à la fin.");
+      }
+    }  
+  }
+
+  public static void exo20(){
+    //exemple : 2481 -> 2 + 4 + 8 + 1 -> la somme est égal à 15
+    
+  }
+
+  public static void exo21(){
+    int tab [] = {2, 48, 10, 65, 3, 20, 15, 2};
+    for (int i = 0 ; i < tab.length - 1 ; i++){
+      if (tab[i] == 10){
+        for (int k = i + 1; k < tab.length - 1 ; k++){
+          if (tab[k] == 20){
+            System.out.println("Le tableau contient un 10 puis un 20.");
+          }
+        }
+      }
+    }
+  }
   public static void exo30(){
     int [] tab = {23, 45, 9, 22, 16, 18};
     int valeurmin = tab[0];
