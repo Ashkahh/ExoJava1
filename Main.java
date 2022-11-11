@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo21();
+    exo22();
   }
 
   public static void exo1(){
@@ -110,6 +110,18 @@ class Main {
       }
     }
   }
+
+  public static void exo22(){
+    int [] tab = {2, 5, 9, 10, 11, 15, 2};
+    for (int i = 0 ; i < tab.length - 1 ; i++){
+      if (tab[i] == (tab[i + 1] - 1)){
+        if (tab[i + 1] == (tab[i + 2] - 1)){
+        System.out.println("Le tableau contient trois nombres croissants adjacents");
+        }
+      }
+    }
+  }
+  
   public static void exo30(){
     int [] tab = {23, 45, 9, 22, 16, 18};
     int valeurmin = tab[0];
