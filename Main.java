@@ -233,6 +233,14 @@ class Main {
     }
   }
 
+  public static void exo34(){
+    String [] tab = {"ab", "abc", "abcd", "abcde", "abcdef"};  
+  }
+
+  public static void exo35(){
+      
+  }
+  
 //Exercices sur les chaînes de caratères
   
   public static void exo36(){
