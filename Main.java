@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo37();
+    exo17();
   }
 
   public static void exo1(){
@@ -40,7 +40,34 @@ class Main {
     System.out.println();
     }
   }
+  
+//Exercices sur les tableaux :
+  
+  public static void exo16(){
+    int [] tab = {1, 5, 8, 9 ,12 ,9, 10};
+    if (tab.length >= 2){
+      if (tab[0] == 10 ) {
+        System.out.println("Début");
+      }
+      if (tab[tab.length - 1] == 10){
+        System.out.println("Fin");
+      }
+    }
+  }
 
+  public static void exo17(){
+    int [] tab = {12, 5, 9, 8, 12};
+    if (tab.length >= 2){
+      if (tab[0] == tab[tab.length - 1]){
+        System.out.println("Les premier et dernier numéros sont identiques");
+      }
+    }
+  }
+  
+  public static void exo18(int[] tabDor){
+    
+  }
+  
   public static void exo30(){
     int [] tab = {23, 45, 9, 22, 16, 18};
     int valeurmin = tab[0];
@@ -94,6 +121,8 @@ class Main {
     }
   }
 
+//Exercices sur les chaînes de caratères
+  
   public static void exo36(){
     String phrase = "test de phrase une après la fin";
     int fin = phrase.length();
