@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo22();
+    exo24();
   }
 
   public static void exo1(){
@@ -117,6 +117,26 @@ class Main {
       if (tab[i] == (tab[i + 1] - 1)){
         if (tab[i + 1] == (tab[i + 2] - 1)){
         System.out.println("Le tableau contient trois nombres croissants adjacents");
+        }
+      }
+    }
+  }
+
+  public static void exo23(){
+    //additionner deux nombres sans utiliser d’opérateurs arithmétiques
+  }
+
+  public static void exo24(){
+    for (int i = 1 ; i <= 100 ; i++){
+      if (i % 3 == 0 && i % 5 == 0){
+        System.out.println("fizz buzz");
+      } else {
+        if (i % 3 == 0){
+          System.out.println("Fizz");
+        } else if (i % 5 == 0){
+          System.out.println("Buzz");
+        } else {
+          System.out.println(i);
         }
       }
     }
