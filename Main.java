@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo17();
+    exo18();
   }
 
   public static void exo1(){
@@ -64,8 +64,18 @@ class Main {
     }
   }
   
-  public static void exo18(int[] tabDor){
-    
+  public static void exo18(){
+    int [] tab = {20, 30, 40};
+    int copie = tab[0];
+    for (int k = 0 ; k < 2 ; k++){
+      tab[0] = tab[2 - k];
+      tab[2 - k] = copie;
+      copie = tab[k];
+    }
+    System.out.println("tableau :");
+    for (int i = 0 ; i < 3 ; i++){  
+      System.out.print(tab[i] + " ");
+    }
   }
   
   public static void exo30(){
