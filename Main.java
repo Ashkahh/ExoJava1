@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo24();
+    exo25();
   }
 
   public static void exo1(){
@@ -140,6 +140,17 @@ class Main {
         }
       }
     }
+  }
+
+  public static void exo25(){
+    int [] tab = {5, 9, 6, 2, 5, 1, 3};
+    int occurence = 0, supprimer = 5;
+    for (int i = 0 ; i < tab.length - 1 ; i++){
+      if (tab[i] == supprimer){
+        occurence++;
+      }
+    }
+    System.out.println("Nouvelle longueur du tableau : " + (tab.length - occurence));
   }
   
   public static void exo30(){
