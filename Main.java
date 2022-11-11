@@ -3,7 +3,7 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo25();
+    exo33();
   }
 
   public static void exo1(){
@@ -152,6 +152,18 @@ class Main {
     }
     System.out.println("Nouvelle longueur du tableau : " + (tab.length - occurence));
   }
+
+  public static void exo26(){
+    //boolean [][] tableau = {true, false, true}, {false, true, false};
+  }
+
+  public static void exo27(){
+    //Algorithme d’Euclide  
+  }
+
+  public static void exo28(){
+    
+  }
   
   public static void exo30(){
     int [] tab = {23, 45, 9, 22, 16, 18};
@@ -171,16 +183,17 @@ class Main {
 
   public static void exo31(){
     int [] tab = {12, 22, 34, 54, 22, 2, 67, 34, 22, 12, 4};
-    for (int j = 0 ; j <tab.length ; j++){
-      for (int k = 0 ; k < j ; k++){
-        if (tab[j] == tab[k]){
-          //supprimer la case du tableau
+    //int [] tabcoupe = new int[tab.length - 1];
+    for (int i = 0 ; i < tab.length ; i++){
+      for (int k = 0 ; k < i ; k++){
+        if (tab[i] == tab[k]){
+          //System.arraycopy(tab, 0, tabcoupe, 0, tab.length - 1);
         }
       }
     }
-    System.out.println("tabeau sans doublons : ");
-    for (int i = 0 ; i < tab.length ; i++){
-      System.out.print(tab[i] + ", ");
+    System.out.println("tableau sans doublons : ");
+    for (int j = 0 ; j < tab.length ; j++){
+      System.out.print(tab[j] + ", ");
     }
   }
 
@@ -196,13 +209,27 @@ class Main {
         echange = tab[fin];
         tab[fin] = tab[i];
         tab[i] = echange;
-        fin--;
-        
+        fin--; 
       } 
     }
     System.out.println("tableau : ");
     for (int k = 0 ; k < tab.length ; k++){
       System.out.print(tab[k] + " ,");
+    }
+  }
+
+  public static void exo33(){
+    int [] tab = {2, -8, 7, -6, 5};
+    int compteur = 0;
+    for (int i = 0 ; i < tab.length - 1 ; i++){
+      if (tab[i] > 0 && tab[i+1] < 0 || tab[i] < 0 && tab[i+1] > 0){
+        compteur++;
+      }
+    }
+    if (compteur == (tab.length - 1)){
+      System.out.println("le tableau d’entiers alterne entre des valeurs positives et négatives.");
+    } else {
+      System.out.println("le tableau d’entiers n'alterne pas entre des valeurs positives et négatives.");
     }
   }
 
