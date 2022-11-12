@@ -94,10 +94,11 @@ class Main {
   }
 
   public static void exo20(){
-    //exemple : 64815 -> 6 + 4 + 8 + 1 + 5 -> la somme est deux trois
+    //exemple : 6481 -> 6 + 4 + 8 + 1 = 19 -> la somme est un neuf
     String [] lettre = {"zero", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf"};
-    int nombre = 64814, somme = 0, afficher = 0, longueur = 1, j = 1;
-
+    int nombre = 6481, somme = 0, longueur = 1, j = 1;
+    String chaine = "";
+    
     while (longueur > 0){    //calcul du nombre de chiffre dans la variable "nombre"
       longueur = nombre / (10 * j);
       j *= 10 ;     
@@ -108,10 +109,11 @@ class Main {
     }
 
     System.out.print("La somme est ");
-    for (int i = 10 ; i >= 1 ; i /= 10){
-      //afficher = somme % i;
-      System.out.print(lettre[afficher] + " ");
+    while (somme > 0){   
+      chaine = lettre[somme % 10] + " " + chaine;
+      somme /= 10;
     }
+    System.out.print(chaine);
   }
 
   public static void exo21(){
