@@ -3,9 +3,9 @@ import java.lang.*;
 
 class Main {
   public static void main(String[] args) {
-    exo20();
+    exo36split();
   }
-
+  
   public static void exo1(){
     System.out.println("Lucas");
   }
@@ -277,6 +277,17 @@ class Main {
     System.out.println("phrase inversé : " + phraseinv);
   }
 
+  public static void exo36split(){
+    String phrase = "test de phrase une après la fin";
+    String [] split = phrase.split(" ");
+    String phraseinv = "";
+    
+    for (int i = 0 ; i < split.length ; i++){
+       phraseinv = split[i] + " " + phraseinv; 
+    }
+    System.out.println(phraseinv);
+  }
+  
   public static void exo37(){
     String chaine = "abacbacbacbbace";
 
